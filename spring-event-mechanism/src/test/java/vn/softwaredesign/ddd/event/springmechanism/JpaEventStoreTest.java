@@ -48,6 +48,16 @@ public class JpaEventStoreTest {
     @BeforeEach
     void setUp() {
         SnowflakeIdGenerator idGenerator = new SnowflakeIdGenerator(1L, 1L);
+        entityManager.createNativeQuery("DROP TABLE IF EXISTS stored_events").executeUpdate();
+        entityManager.createNativeQuery(
+                "CREATE TABLE stored_events (" +
+                        "id BIGINT PRIMARY KEY AUTO_INCREMENT, " +
+                        "event_id BIGINT NOT NULL UNIQUE, " +
+                        "event_type VARCHAR(255) NOT NULL, " +
+                        "event_body TEXT NOT NULL, " +
+                        "occurred_on DATETIME NOT NULL" +
+                        ")"
+        ).executeUpdate();
         eventStore = new JpaEventStore(entityManager, idGenerator);
     }
 

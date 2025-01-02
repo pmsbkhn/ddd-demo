@@ -13,6 +13,8 @@
     <module>ddd-common</module>
     <module>shipment-domain</module>
     <module>shipment-application</module>
+    <module>spring-event-mechanism</module>
+    <module>shipment-service</module>
   </modules>
 
   <properties>

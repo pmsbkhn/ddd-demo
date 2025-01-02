@@ -8,7 +8,7 @@ import java.util.Set;
 
 
 @Component
-public class DriverOutputAdapter implements DriverRepository {
+public class DriverOa implements DriverRepository {
     @Override
     public Set<Driver> selectWhereWithinDistance(double radius) {
         // TODO
