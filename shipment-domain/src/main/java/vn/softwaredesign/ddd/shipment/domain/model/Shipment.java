@@ -30,11 +30,34 @@ public class Shipment {
                 ));
     }
 
+    public void cancelShipment() {
+        // TODO
+    }
+
     public DriverSpecification driverSpecification() {
         return this.driverSpecification;
     }
 
     public void setDriverSpecification(DriverSpecification aDriverSpecification) {
         this.driverSpecification = aDriverSpecification;
+    }
+
+    public ShipmentID id() {
+        return id;
+    }
+
+    public DriverID driverID() {
+        return driverID;
+    }
+
+    public ShipmentStatus status() {
+        return status;
+    }
+
+    // Test:
+    public Shipment(ShipmentID id, DriverID driverID, ShipmentStatus status) {
+        this.id = id;
+        this.driverID = driverID;
+        this.status = status;
     }
 }

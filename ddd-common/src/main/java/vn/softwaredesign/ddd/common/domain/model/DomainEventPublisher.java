@@ -15,7 +15,7 @@ public class DomainEventPublisher {
         return INSTANCE;
     }
 
-    public <T> void publish(final T aDomainEvent) {
+    public <T extends DomainEvent> void publish(final T aDomainEvent) {
         if (publishing.get()) {
             return;
         }
@@ -30,11 +30,11 @@ public class DomainEventPublisher {
                 }
             }
         } finally {
-            publishing.set(true);
+            publishing.set(false);
         }
     }
 
-    private <T> void handleEventSafety(DomainEventSubscriber<?> subscriber, T aDomainEvent) {
+    private <T extends DomainEvent> void handleEventSafety(DomainEventSubscriber<?> subscriber, T aDomainEvent) {
         if (subscriber.subscribedToEventType().isInstance(aDomainEvent)) {
             @SuppressWarnings("unchecked")
             DomainEventSubscriber<T> typedSubscriber = (DomainEventSubscriber<T>) subscriber;
@@ -42,7 +42,7 @@ public class DomainEventPublisher {
         }
     }
 
-    public <T> void subscribe(DomainEventSubscriber<T> subscriber) {
+    public <T extends DomainEvent> void subscribe(DomainEventSubscriber<T> subscriber) {
         subscribers.get().add(subscriber);
     }
 

@@ -17,7 +17,8 @@ public class ShipmentEventSubscriberProcessor {
         this.eventStore = eventStore;
     }
 
-    @Before("execution(* vn.softwaredesign.ddd.shipment.domain.model.*.*(..))")
+    @Before("execution(* vn.softwaredesign.ddd.shipment.domain.model.Shipment.assignDriver(..)) ||" +
+            "execution(* vn.softwaredesign.ddd.shipment.domain.model.Shipment.cancelShipment(..))")
     public void register() {
         DomainEventPublisher
                 .instance()

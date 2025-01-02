@@ -30,4 +30,12 @@ public class ShipmentAssigned implements DomainEvent {
     public LocalDateTime occurredOn() {
         return occurredOn;
     }
+
+    public ShipmentID shipmentID() {
+        return shipmentID;
+    }
+
+    public DriverID driverID() {
+        return driverID;
+    }
 }
