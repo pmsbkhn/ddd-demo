@@ -1,16 +1,5 @@
 package vn.softwaredesign.ddd.shipment;
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-import org.mockito.ArgumentCaptor;
-import vn.softwaredesign.ddd.common.domain.model.DomainEventPublisher;
-import vn.softwaredesign.ddd.shipment.domain.model.*;
-
-import static junit.framework.Assert.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
-import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.when;
-
 public class ShipmentTest {
 //    private Shipment shipment;
 //    private Driver mockDriver;

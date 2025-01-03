@@ -4,7 +4,6 @@ import vn.softwaredesign.ddd.common.AssertionConcern;
 import vn.softwaredesign.ddd.common.domain.model.DomainEvent;
 
 import java.time.LocalDateTime;
-import java.util.Date;
 import java.util.Objects;
 
 public class StoredEvent extends AssertionConcern {

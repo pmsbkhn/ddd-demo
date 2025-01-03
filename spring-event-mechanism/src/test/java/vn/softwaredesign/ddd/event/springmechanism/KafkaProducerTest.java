@@ -18,7 +18,6 @@ import org.springframework.kafka.listener.KafkaMessageListenerContainer;
 import org.springframework.kafka.listener.MessageListener;
 import org.springframework.kafka.test.context.EmbeddedKafka;
 import org.springframework.kafka.test.utils.ContainerTestUtils;
-import org.springframework.kafka.test.utils.KafkaTestUtils;
 import vn.softwaredesign.ddd.common.event.Destination;
 import vn.softwaredesign.ddd.common.event.MessageParameters;
 import vn.softwaredesign.ddd.common.event.Notification;
@@ -124,7 +123,6 @@ public class KafkaProducerTest {
 
         container.start();
         ContainerTestUtils.waitForAssignment(container, 1);
-//        KafkaTestUtils.waitForAssignment(container, embeddedKafkaBroker.getPartitionsPerTopic());
     }
 
 }

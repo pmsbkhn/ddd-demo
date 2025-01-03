@@ -13,8 +13,16 @@ public class Driver {
     private Set<ShipmentFeature> preferredShipmentFeatures;
     private Location currentLocation;
     private Route route;
+    
+    
 
-    public Boolean inStatus(DriverStatus requiredStatus) {
+    public Driver(DriverID anId, DriverStatus aStatus, Location aLocation) {
+		this.id = anId;
+		this.status = aStatus;
+		this.currentLocation = aLocation;
+	}
+
+	public Boolean inStatus(DriverStatus requiredStatus) {
         return status == requiredStatus;
     }
 
@@ -30,4 +38,12 @@ public class Driver {
     public DriverID id() {
         return id;
     }
+    
+    public DriverStatus status() {
+		return status;
+	}
+    
+    public Location currentLocation() {
+		return currentLocation;
+	}
 }

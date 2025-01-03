@@ -1,8 +1,6 @@
 package vn.softwaredesign.ddd.shipment.shipmentservice.service;
 
-
 import jakarta.transaction.Transactional;
-import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import vn.softwaredesign.ddd.shipment.application.inbound.ShipmentAssignment;
 import vn.softwaredesign.ddd.shipment.application.inbound.ShipmentAssignmentInput;

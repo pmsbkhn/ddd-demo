@@ -1,6 +1,5 @@
 package vn.softwaredesign.ddd.event.springmechanism.messaging;
 
-import org.apache.kafka.clients.producer.KafkaProducer;
 import org.springframework.kafka.core.KafkaTemplate;
 import vn.softwaredesign.ddd.common.event.Notification;
 

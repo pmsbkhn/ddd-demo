@@ -1,8 +1,6 @@
 package vn.softwaredesign.ddd.event.springmechanism.persistence;
 
 import jakarta.persistence.EntityManager;
-import jakarta.persistence.PersistenceContext;
-import org.springframework.stereotype.Repository;
 import vn.softwaredesign.ddd.common.domain.model.DomainEvent;
 import vn.softwaredesign.ddd.common.event.EventSerializer;
 import vn.softwaredesign.ddd.common.event.EventStore;
@@ -15,7 +13,7 @@ import java.util.stream.Collectors;
 //@Repository
 public class JpaEventStore implements EventStore {
 
-    @PersistenceContext
+//    @PersistenceContext
     protected final EntityManager entityManager;
 
     private final SnowflakeIdGenerator idGenerator;

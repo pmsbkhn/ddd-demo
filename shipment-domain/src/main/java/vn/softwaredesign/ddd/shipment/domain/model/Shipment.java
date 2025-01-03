@@ -2,6 +2,7 @@ package vn.softwaredesign.ddd.shipment.domain.model;
 
 import vn.softwaredesign.ddd.common.domain.model.DomainEventPublisher;
 import vn.softwaredesign.ddd.shipment.domain.model.specifications.DriverSpecification;
+import vn.softwaredesign.ddd.shipment.domain.model.specifications.Location;
 
 import java.time.LocalDateTime;
 
@@ -60,4 +61,9 @@ public class Shipment {
         this.driverID = driverID;
         this.status = status;
     }
+    
+    public Location pickupLocation() {
+    	return new Location(null, this.pickupLatitude, pickupLongitude);
+    }
+    
 }

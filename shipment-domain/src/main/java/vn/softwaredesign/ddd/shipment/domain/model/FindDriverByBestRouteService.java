@@ -19,7 +19,7 @@ public class FindDriverByBestRouteService implements FindDriverForShipmentServic
     @Override
     public Driver findDriver(Shipment shipment) {
         Set<Driver> driversWithinDistance = driverRepository.selectSatisfying(
-                new DriverWithinDistanceSpecification(3)
+                new DriverWithinDistanceSpecification(shipment.pickupLocation(), 3d)
         );
 
         Set<Driver> availableDrivers = new DriverStatusSpecification(DriverStatus.AVAILABLE)

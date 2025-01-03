@@ -2,7 +2,6 @@ package vn.softwaredesign.ddd.event.springmechanism.persistence;
 
 
 import jakarta.persistence.*;
-import lombok.Data;
 import vn.softwaredesign.ddd.common.event.PublishedMessageTracker;
 import vn.softwaredesign.ddd.common.event.TrackerId;
 import vn.softwaredesign.ddd.common.event.TrackerMetadata;
@@ -11,7 +10,6 @@ import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "published_message_trackers")
-@Data
 public class PublishedMessageTrackerEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -64,4 +62,62 @@ public class PublishedMessageTrackerEntity {
 
         return entity;
     }
+
+	public Long getTrackerId() {
+		return trackerId;
+	}
+
+	public void setTrackerId(Long trackerId) {
+		this.trackerId = trackerId;
+	}
+
+	public long getMostRecentPublishedMessageId() {
+		return mostRecentPublishedMessageId;
+	}
+
+	public void setMostRecentPublishedMessageId(long mostRecentPublishedMessageId) {
+		this.mostRecentPublishedMessageId = mostRecentPublishedMessageId;
+	}
+
+	public String getPurpose() {
+		return purpose;
+	}
+
+	public void setPurpose(String purpose) {
+		this.purpose = purpose;
+	}
+
+	public String getScope() {
+		return scope;
+	}
+
+	public void setScope(String scope) {
+		this.scope = scope;
+	}
+
+	public LocalDateTime getCreatedAt() {
+		return createdAt;
+	}
+
+	public void setCreatedAt(LocalDateTime createdAt) {
+		this.createdAt = createdAt;
+	}
+
+	public String getStatus() {
+		return status;
+	}
+
+	public void setStatus(String status) {
+		this.status = status;
+	}
+
+	public LocalDateTime getUpdatedAt() {
+		return updatedAt;
+	}
+
+	public void setUpdatedAt(LocalDateTime updatedAt) {
+		this.updatedAt = updatedAt;
+	}
+    
+   
 }

@@ -1,6 +1,5 @@
 package vn.softwaredesign.ddd;
 
-import org.junit.jupiter.api.Test;
 import vn.softwaredesign.ddd.common.domain.model.DomainEvent;
 import vn.softwaredesign.ddd.common.domain.model.DomainEventPublisher;
 import vn.softwaredesign.ddd.common.domain.model.DomainEventSubscriber;

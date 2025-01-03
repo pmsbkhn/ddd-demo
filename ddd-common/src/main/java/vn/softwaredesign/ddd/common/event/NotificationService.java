@@ -82,7 +82,8 @@ public class NotificationService<T> {
                 .build();
     }
 
-    private static NotificationSerializer objectSerializer() {
+    @SuppressWarnings("unused")
+	private static NotificationSerializer objectSerializer() {
         return NotificationSerializer.instance();
     }
 

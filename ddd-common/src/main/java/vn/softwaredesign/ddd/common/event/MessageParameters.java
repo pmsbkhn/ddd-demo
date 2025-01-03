@@ -1,6 +1,6 @@
 package vn.softwaredesign.ddd.common.event;
 
-import java.time.LocalDateTime;
+
 import java.util.HashMap;
 import java.util.Map;
 
@@ -8,7 +8,8 @@ public class MessageParameters {
 
     private final Destination destination;
     private final Map<String, String> headers = new HashMap<>();
-    private final String format; // JSON, AVRO, TEXT
+    @SuppressWarnings("unused")
+	private final String format; // JSON, AVRO, TEXT
 
     public MessageParameters(Builder builder) {
         this.destination = builder.destination;

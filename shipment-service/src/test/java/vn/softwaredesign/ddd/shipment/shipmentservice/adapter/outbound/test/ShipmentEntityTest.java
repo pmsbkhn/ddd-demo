@@ -1,4 +1,4 @@
-package vn.softwaredesign.ddd.shipment.shipmentservice.adapter.outbound;
+package vn.softwaredesign.ddd.shipment.shipmentservice.adapter.outbound.test;
 
 
 import jakarta.persistence.Column;
@@ -14,7 +14,7 @@ import vn.softwaredesign.ddd.shipment.domain.model.ShipmentStatus;
 @Entity
 @Table(name = "shipments")
 @Data
-public class ShipmentEntity {
+public class ShipmentEntityTest {
     @Id
     @Column(nullable = false)
     private String id;
@@ -25,17 +25,17 @@ public class ShipmentEntity {
     @Column(nullable = false)
     private String status;
 
-    public ShipmentEntity() {}
+    public ShipmentEntityTest() {}
 
-    public ShipmentEntity(String id,
-                          String driverID,
-                          String status) {
+    public ShipmentEntityTest(String id,
+                              String driverID,
+                              String status) {
         this.id = id;
         this.driverID = driverID;
         this.status = status;
     }
 
-    public ShipmentEntity(Shipment shipment) {
+    public ShipmentEntityTest(Shipment shipment) {
         this.id = shipment.id().id();
         this.driverID = shipment.driverID().id();
         this.status = shipment.status().name();

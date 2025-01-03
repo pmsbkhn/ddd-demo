@@ -11,7 +11,6 @@ import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 import org.springframework.test.context.TestPropertySource;
-import vn.softwaredesign.ddd.common.domain.model.DomainEvent;
 import vn.softwaredesign.ddd.common.event.StoredEvent;
 import vn.softwaredesign.ddd.common.lang.SnowflakeIdGenerator;
 import vn.softwaredesign.ddd.event.springmechanism.persistence.JpaEventStore;
@@ -19,7 +18,6 @@ import vn.softwaredesign.ddd.shipment.domain.model.DriverID;
 import vn.softwaredesign.ddd.shipment.domain.model.ShipmentAssigned;
 import vn.softwaredesign.ddd.shipment.domain.model.ShipmentID;
 
-import java.time.Instant;
 import java.time.LocalDateTime;
 import java.util.List;
 
